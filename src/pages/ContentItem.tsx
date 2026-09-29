@@ -1,14 +1,10 @@
 import { useLocation, Link } from 'react-router-dom';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 
-import contentData from '../data/Content.json';
-import type { ContentItem as Content } from '../types/content';
-
-const contents = contentData as Content[];
-
+import { contentData } from '../data/content';
 function ContentItem() {
   const search = new URLSearchParams(useLocation().search).get('q')?.toLowerCase() ?? '';
-  const results = contents.filter((item) => item.name.toLowerCase().includes(search) || item.description.toLowerCase().includes(search));
+  const results = contentData.filter((item) => item.name.toLowerCase().includes(search) || item.description.toLowerCase().includes(search));
 
   return (
     <Container className="py-4">

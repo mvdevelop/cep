@@ -2,15 +2,12 @@ import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
-import contentData from '../data/Content.json';
-import type { ContentItem } from '../types/content';
-
-const contents = contentData as ContentItem[];
+import { contentData } from '../data/content';
 
 function Season() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const season = contents.find((item) => item.id === Number(id));
+  const season = contentData.find((item) => item.id === Number(id));
   const [pageIndex, setPageIndex] = useState(0);
 
   if (!season || season.pages.length === 0) {
