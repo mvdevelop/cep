@@ -4,7 +4,7 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 import { contentData } from '../data/content';
 import { getImageUrl } from '../utils/assets';
 function ContentItem() {
-  const search = new URLSearchParams(useLocation().search).get('q')?.toLowerCase() ?? '';
+  const search = new URLSearchParams(useLocation().search).get('q')?.trim().toLowerCase() ?? '';
   const results = contentData.filter((item) => item.name.toLowerCase().includes(search) || item.description.toLowerCase().includes(search));
 
   return (

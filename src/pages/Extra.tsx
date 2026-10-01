@@ -15,11 +15,11 @@ export default function Extra() {
           <p className="text-secondary">Fatos históricos, descobertas científicas e momentos marcantes que transformaram a educação e o conhecimento humano.</p>
         </header>
         <Row className="align-items-center mb-5">
-          <Col md={6}><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80" alt="História da Educação" className="img-fluid rounded shadow" loading="lazy" /></Col>
+          <Col md={6}><img src="/banner.jpg" alt="História da Educação" className="img-fluid rounded shadow" loading="lazy" width="900" height="400" /></Col>
           <Col md={6}><h2 className="fw-bold mb-3">A Evolução da Educação</h2><p>Desde as primeiras formas de escrita até as escolas modernas, a educação passou por transformações que moldaram a forma como aprendemos hoje.</p><p>O objetivo permanece preparar pessoas para compreender o mundo e abrir portas para novas oportunidades.</p></Col>
         </Row>
         <Row className="align-items-center flex-md-row-reverse mb-5">
-          <Col md={6}><img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=900&q=80" alt="Grandes Descobertas" className="img-fluid rounded shadow" loading="lazy" /></Col>
+          <Col md={6}><img src="/banner2.jpg" alt="Grandes Descobertas" className="img-fluid rounded shadow" loading="lazy" width="900" height="400" /></Col>
           <Col md={6}><h2 className="fw-bold mb-3">Grandes Descobertas que Mudaram o Mundo</h2><p>A história da ciência é marcada por descobertas que revolucionaram o conhecimento humano.</p></Col>
         </Row>
         <section className="my-5" aria-labelledby="curiosities-title">
