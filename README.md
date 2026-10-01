@@ -1,100 +1,75 @@
+# CEP — Copa do Ensino Público
 
-## 📚 CEP — Copa do Ensino Público
+SPA educacional para organizar conteúdos de reforço escolar para estudantes da rede pública.
 
-Um projeto desenvolvido com Vite + React para organizar, visualizar e gerenciar conteúdos de estudo voltados a alunos da rede pública.
-O CEP funciona como um hub educacional, reunindo resumos, videoaulas, exercícios, curiosidades e materiais de reforço escolar.
-Pensado para ser simples, rápido e acessível, ele facilita o aprendizado contínuo e orientado.
+## Stack
 
-## 🚀 Tecnologias utilizadas
+- Vite 6 + React 19
+- TypeScript em modo `strict` e TSX
+- React Router 7
+- Tailwind CSS 4 e React Bootstrap
+- Vitest + Testing Library
+- ESLint 9
 
-Vite — Ferramenta de build extremamente rápida
+A aplicação é estática: o conteúdo é carregado de um JSON local e validado em runtime. Não existe backend, autenticação ou coleta de dados em servidor.
 
-React — Biblioteca para construção da interface
+## Executar localmente
 
-JavaScript / JSX
-
-CSS / Tailwind (opcional caso esteja utilizando)
-
-React Router (caso o projeto tenha navegação entre páginas)
-
-Axios / Fetch (se houver comunicação com API própria)
-
-## 📦 Instalação e execução
-
-Clone o repositório:
-
-git clone https://github.com/mvdevelop/cep-dot-com.git
-
-
-Acesse a pasta:
-
-cd cep-dot-com
-
-
-Instale as dependências:
-
+```bash
 npm install
-# ou
-yarn
-# ou
-pnpm install
-
-
-Execute o ambiente de desenvolvimento:
-
 npm run dev
-# ou
-yarn dev
+```
 
-## 🧩 Estrutura do projeto (exemplo)
-cep-dot-com/
-│
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── hooks/
-│   ├── context/
-│   ├── services/
-│   ├── App.jsx
-│   ├── main.jsx
-│
-├── public/
-├── index.html
-└── package.json
+Comandos de qualidade:
 
-## ✨ Funcionalidades (exemplo, adapte conforme o seu projeto)
+```bash
+npm run typecheck
+npm run lint
+npm test
+npm run coverage
+npm run build
+npm audit --audit-level=high
+```
 
-📘 Organização de conteúdos por matéria (Português, Matemática, Ciências, História…)
-🔍 Pesquisa de materiais escolares
-📄 Visualização de cada item (resumo, vídeo, exercício, curiosidade etc.)
-📝 Descrição e detalhes sobre cada conteúdo
-⭐ Favoritar conteúdos importantes
-🏆 Sessões especiais da Copa do Ensino Público
-📚 Filtros por categorias e níveis de ensino
-⚡ Renderização rápida graças ao Vite
+## Estrutura
 
-## 🔧 Como contribuir
+```text
+src/
+├── components/   # Navbar, comentários e rodapé
+├── data/         # Conteúdo local e validação runtime
+├── pages/        # Home, busca, temporadas e extras
+├── types/        # Contratos TypeScript
+├── App.tsx       # Rotas da SPA
+└── main.tsx      # Ponto de entrada
+```
 
-Faça um fork do projeto:
+Rotas principais:
 
-Crie uma branch para sua feature:
+- `/` — página inicial e catálogo;
+- `/search?q=termo` — busca por nome e descrição;
+- `/season/:id` — leitura paginada de um conteúdo.
 
+## Segurança e privacidade
+
+- `VITE_*` nunca deve conter segredos, pois valores públicos são incorporados ao bundle.
+- Conteúdo e comentários são tratados como dados não confiáveis e não são renderizados como HTML arbitrário.
+- Comentários ficam apenas no armazenamento local do navegador; não há conta, autenticação ou processamento em servidor.
+- JWT, RBAC, MFA, rate limiting e controles de banco de dados pertencem a um backend futuro e não são simulados no frontend.
+- Consulte [`SECURITY.md`](SECURITY.md) e [`THREAT-MODEL.md`](THREAT-MODEL.md).
+
+## CI/CD
+
+O workflow do GitHub Actions executa typecheck, lint, testes, cobertura, build, auditoria de dependências e verificações de segurança apropriadas ao frontend.
+
+## Contribuição
+
+```bash
 git checkout -b minha-feature
+npm run typecheck && npm run lint && npm test
+```
 
+Abra um Pull Request descrevendo a motivação, os testes executados e eventuais impactos de segurança.
 
-Comite suas mudanças:
-
-git commit -m "feat: minha melhoria"
-
-
-Envie a branch:
-
-git push origin minha-feature
-
-
-Abra um Pull Request 🎉
-
-## 📄 Licença
+## Licença
 
 Este projeto está sob a licença MIT.
-Sinta-se livre para usar, modificar e contribuir para o crescimento da plataforma.

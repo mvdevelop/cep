@@ -1,7 +1,7 @@
 import { useState, type ChangeEvent, type FormEvent } from 'react';
 import { FaSearch, FaUser, FaUserPlus } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
-import logo from '../../public/icon.ico';
+const logo = '/icon.ico';
 
 function AppNavbar() {
   const [isOpen, setIsOpen] = useState(false);
