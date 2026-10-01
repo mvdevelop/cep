@@ -14,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/search" element={<ContentItem />} />
         <Route path="/season/:id" element={<Season />} />
+        <Route path="*" element={<p className="text-center mt-5">Página não encontrada.</p>} />
       </Routes>
       <Footer />
     </BrowserRouter>

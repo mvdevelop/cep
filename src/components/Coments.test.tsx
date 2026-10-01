@@ -10,6 +10,6 @@ describe('Coments', () => {
     fireEvent.change(screen.getByPlaceholderText(/Compartilhe sua opinião/i), { target: { value: 'Excelente conteúdo' } });
     fireEvent.click(screen.getByRole('button', { name: 'Publicar' }));
     expect(screen.getByText('Excelente conteúdo')).toBeInTheDocument();
-    expect(localStorage.getItem('elo_comments')).toContain('Excelente conteúdo');
+    expect(localStorage.getItem('cep_comments')).toContain('Excelente conteúdo');
   });
 });

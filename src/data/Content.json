@@ -29,7 +29,7 @@
         "text": "Literatura é a área dedicada ao estudo das manifestações artísticas escritas, explorando poemas, contos, romances, crônicas e peças teatrais. Ela revela culturas, emoções e perspectivas humanas, estimulando interpretação, criatividade e senso crítico. Através das obras literárias, o estudante compreende diferentes épocas, estilos e autores, enriquecendo sua visão de mundo e sua capacidade de análise."
       },
       {
-        "img": "season1/page2.jpg",
+        "img": "/literatura.png",
         "text": "Aqueles que ouviram o chamado agora marcham em direção ao despertar."
       }
     ]
@@ -42,11 +42,11 @@
     "image-01": "logicaDeProgramacao.png",
     "pages": [
       {
-        "img": "season2/page1.jpg",
+        "img": "/logicaDeProgramacao.png",
         "text": "Lógica de programação é a habilidade de pensar de forma estruturada para resolver problemas por meio de passos claros, sequenciais e coerentes. Ela envolve criar algoritmos, analisar condições, repetir ações e manipular dados, servindo como a base para entender e escrever qualquer linguagem de programação."
       },
       {
-        "img": "season2/page2.jpg",
+        "img": "/js.png"
         "text": "Aqueles que ouviram o chamado agora marcham em direção ao despertar."
       }
     ]
@@ -59,11 +59,11 @@
     "image-01": "js.png",
     "pages": [
       {
-        "img": "season2/page1.jpg",
+        "img": "/logicaDeProgramacao.png",
         "text": "JavaScript é a linguagem de programação que dá vida às páginas web, permitindo criar interatividade, manipular elementos da interface, responder a eventos do usuário e consumir APIs. É uma das principais tecnologias da web moderna, executada diretamente no navegador e essencial para aplicações dinâmicas e responsivas."
       },
       {
-        "img": "season2/page2.jpg",
+        "img": "/js.png"
         "text": "Aqueles que ouviram o chamado agora marcham em direção ao despertar."
       }
     ]
@@ -76,11 +76,11 @@
     "image-01": "",
     "pages": [
       {
-        "img": "season3/page1.jpg",
+        "img": "/js.png"
         "text": "Os ecos do elo se espalham por mundos esquecidos..."
       },
       {
-        "img": "season3/page2.jpg",
+        "img": "/js.png"
         "text": "Aqueles que ouviram o chamado agora marcham em direção ao despertar."
       }
     ]

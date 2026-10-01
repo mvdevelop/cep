@@ -8,7 +8,7 @@ export function getImageUrl(fileName: string, fallback?: string): string {
   const normalizedName = fileName.replace(/^\/+/, '').split('/').pop() ?? '';
   const assetPath = Object.keys(assetModules).find((path) => path.endsWith(`/${normalizedName}`));
 
-  if (assetPath) return assetModules[assetPath];
+  if (assetPath) return assetModules[assetPath] ?? '/icon.ico';
   if (fallback) return getImageUrl(fallback);
   return '/icon.ico';
 }
